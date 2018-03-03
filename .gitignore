@@ -1,4 +1,4 @@
 /.idea/*
 user.txt
-vendor/*
+vendor/
 /config.php
