@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a157110-634c-4335-87f8-3184e63ed59a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/config.example.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/Instagram-bot.iml" afterPath="$PROJECT_DIR$/.idea/Instagram-bot.iml" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Bot.php" afterPath="$PROJECT_DIR$/src/Bot.php" />
-      <change beforePath="$PROJECT_DIR$/src/User.php" afterPath="$PROJECT_DIR$/src/User.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,13 +21,14 @@
       <file leaf-file-name="Bot.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bot.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
               <folding>
-                <element signature="e#642#1139#0#PHP" expanded="false" />
-                <element signature="e#3388#4495#0#PHP" expanded="false" />
-                <element signature="e#4501#4686#0#PHP" expanded="false" />
-                <element signature="e#6861#7014#0#PHP" expanded="false" />
+                <element signature="e#556#1053#0#PHP" expanded="false" />
+                <element signature="e#1059#3296#0#PHP" expanded="false" />
+                <element signature="e#3302#4409#0#PHP" expanded="false" />
+                <element signature="e#4415#4600#0#PHP" expanded="false" />
+                <element signature="e#6775#6928#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -52,8 +47,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+            <state relative-caret-position="34">
+              <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -102,8 +97,8 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+            <state relative-caret-position="179">
+              <caret line="37" column="49" lean-forward="false" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
               <folding>
                 <element signature="e#226#628#0#PHP" expanded="false" />
                 <element signature="e#634#840#0#PHP" expanded="false" />
@@ -155,8 +150,8 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/user.txt" />
         <option value="$PROJECT_DIR$/src/User.php" />
-        <option value="$PROJECT_DIR$/src/Bot.php" />
         <option value="$PROJECT_DIR$/config.php" />
+        <option value="$PROJECT_DIR$/src/Bot.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -254,12 +249,12 @@
       <workItem from="1519584230945" duration="12616000" />
       <workItem from="1520081166465" duration="11227000" />
       <workItem from="1520092700200" duration="11000" />
-      <workItem from="1520095808428" duration="1095000" />
+      <workItem from="1520095808428" duration="1347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51949000" />
+    <option name="totallyTimeSpent" value="52201000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -272,6 +267,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26332623" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -281,7 +277,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35520834" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35520834" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -321,10 +317,11 @@
         <state relative-caret-position="510">
           <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
-            <element signature="e#642#1139#0#PHP" expanded="false" />
-            <element signature="e#3388#4495#0#PHP" expanded="false" />
-            <element signature="e#4501#4686#0#PHP" expanded="false" />
-            <element signature="e#6861#7014#0#PHP" expanded="false" />
+            <element signature="e#556#1053#0#PHP" expanded="false" />
+            <element signature="e#1059#3296#0#PHP" expanded="false" />
+            <element signature="e#3302#4409#0#PHP" expanded="false" />
+            <element signature="e#4415#4600#0#PHP" expanded="false" />
+            <element signature="e#6775#6928#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -494,10 +491,11 @@
         <state relative-caret-position="510">
           <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
-            <element signature="e#642#1139#0#PHP" expanded="false" />
-            <element signature="e#3388#4495#0#PHP" expanded="false" />
-            <element signature="e#4501#4686#0#PHP" expanded="false" />
-            <element signature="e#6861#7014#0#PHP" expanded="false" />
+            <element signature="e#556#1053#0#PHP" expanded="false" />
+            <element signature="e#1059#3296#0#PHP" expanded="false" />
+            <element signature="e#3302#4409#0#PHP" expanded="false" />
+            <element signature="e#4415#4600#0#PHP" expanded="false" />
+            <element signature="e#6775#6928#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -549,10 +547,11 @@
         <state relative-caret-position="221">
           <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding>
-            <element signature="e#642#1139#0#PHP" expanded="false" />
-            <element signature="e#3388#4495#0#PHP" expanded="false" />
-            <element signature="e#4501#4686#0#PHP" expanded="false" />
-            <element signature="e#6861#7014#0#PHP" expanded="false" />
+            <element signature="e#556#1053#0#PHP" expanded="false" />
+            <element signature="e#1059#3296#0#PHP" expanded="false" />
+            <element signature="e#3302#4409#0#PHP" expanded="false" />
+            <element signature="e#4415#4600#0#PHP" expanded="false" />
+            <element signature="e#6775#6928#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -604,10 +603,11 @@
         <state relative-caret-position="952">
           <caret line="57" column="23" lean-forward="false" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
           <folding>
-            <element signature="e#642#1139#0#PHP" expanded="false" />
-            <element signature="e#3388#4495#0#PHP" expanded="false" />
-            <element signature="e#4501#4686#0#PHP" expanded="false" />
-            <element signature="e#6861#7014#0#PHP" expanded="false" />
+            <element signature="e#556#1053#0#PHP" expanded="false" />
+            <element signature="e#1059#3296#0#PHP" expanded="false" />
+            <element signature="e#3302#4409#0#PHP" expanded="false" />
+            <element signature="e#4415#4600#0#PHP" expanded="false" />
+            <element signature="e#6775#6928#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -643,10 +643,11 @@
         <state relative-caret-position="901">
           <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
           <folding>
-            <element signature="e#642#1139#0#PHP" expanded="false" />
-            <element signature="e#3388#4495#0#PHP" expanded="false" />
-            <element signature="e#4501#4686#0#PHP" expanded="false" />
-            <element signature="e#6861#7014#0#PHP" expanded="false" />
+            <element signature="e#556#1053#0#PHP" expanded="false" />
+            <element signature="e#1059#3296#0#PHP" expanded="false" />
+            <element signature="e#3302#4409#0#PHP" expanded="false" />
+            <element signature="e#4415#4600#0#PHP" expanded="false" />
+            <element signature="e#6775#6928#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -710,42 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-          <folding>
-            <element signature="e#226#628#0#PHP" expanded="false" />
-            <element signature="e#634#840#0#PHP" expanded="false" />
-            <element signature="e#846#2303#0#PHP" expanded="false" />
-            <element signature="e#2309#2401#0#PHP" expanded="false" />
-            <element signature="e#2407#2480#0#PHP" expanded="false" />
-            <element signature="e#2486#2570#0#PHP" expanded="false" />
-            <element signature="e#2576#2652#0#PHP" expanded="false" />
-            <element signature="e#2658#2741#0#PHP" expanded="false" />
-            <element signature="e#2747#2822#0#PHP" expanded="false" />
-            <element signature="e#2828#2906#0#PHP" expanded="false" />
-            <element signature="e#2912#2982#0#PHP" expanded="false" />
-            <element signature="e#2988#3409#0#PHP" expanded="false" />
-            <element signature="e#3415#3843#0#PHP" expanded="false" />
-            <element signature="e#3849#4206#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bot.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="e#642#1139#0#PHP" expanded="false" />
-            <element signature="e#3388#4495#0#PHP" expanded="false" />
-            <element signature="e#4501#4686#0#PHP" expanded="false" />
-            <element signature="e#6861#7014#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.example.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -770,10 +735,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="37" column="49" lean-forward="false" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+          <folding>
+            <element signature="e#226#628#0#PHP" expanded="false" />
+            <element signature="e#634#840#0#PHP" expanded="false" />
+            <element signature="e#846#2303#0#PHP" expanded="false" />
+            <element signature="e#2309#2401#0#PHP" expanded="false" />
+            <element signature="e#2407#2480#0#PHP" expanded="false" />
+            <element signature="e#2486#2570#0#PHP" expanded="false" />
+            <element signature="e#2576#2652#0#PHP" expanded="false" />
+            <element signature="e#2658#2741#0#PHP" expanded="false" />
+            <element signature="e#2747#2822#0#PHP" expanded="false" />
+            <element signature="e#2828#2906#0#PHP" expanded="false" />
+            <element signature="e#2912#2982#0#PHP" expanded="false" />
+            <element signature="e#2988#3409#0#PHP" expanded="false" />
+            <element signature="e#3415#3843#0#PHP" expanded="false" />
+            <element signature="e#3849#4206#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding>
+            <element signature="e#556#1053#0#PHP" expanded="false" />
+            <element signature="e#1059#3296#0#PHP" expanded="false" />
+            <element signature="e#3302#4409#0#PHP" expanded="false" />
+            <element signature="e#4415#4600#0#PHP" expanded="false" />
+            <element signature="e#6775#6928#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        <state relative-caret-position="34">
+          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
           <folding />
         </state>
       </provider>

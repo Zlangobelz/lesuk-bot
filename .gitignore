@@ -1,4 +1,4 @@
-.idea/
-user.txt
-vendor/
-config.php
+/.idea/*
+/user.txt
+vendor/*
+/config.php
