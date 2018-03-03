@@ -8,44 +8,48 @@ use GuzzleHttp\Client;
 
 class Bot
 {
-    private static $client;
-    private $user;
-
-    //TODO: Request for more posts
     const INSTAGRAM_DOMEN = "https://www.instagram.com";
-    const LOGIN = "zvzvzvzvzvzvzvzvzvzv";
-    const PASSWORD = "ibunar1998vladbelz2";
     const HASHTAG = "likeforfollow";
-
+    const PATH_TO_USER_FILE = __DIR__ . "/../user.txt";
     //I have no idea how does instagram return`s this param
     const COUNT_OF_POSTS = 7;
+    const QUERY_HASH_FOR_PAGES = "472f257a40c653c64c666ce877d59d2b";
+    const QUERY_HASH_FOR_TAGS = "298b92c8d7cad703f7565aa892ede943";
 
-    protected $sessionId;
-    protected $csrf_token;
-    protected $user_id;
+    private static $client;
+    private $user;
     public $counter;
 
     public function __construct()
     {
         self::$client = new Client();
         echo "Authentificating..." . PHP_EOL;
-        $this->user = new User(self::$client, self::LOGIN, self::PASSWORD);
 
+        if (!file_exists(self::PATH_TO_USER_FILE)) {
+            $this->user = new User(self::$client, self::LOGIN, self::PASSWORD);
+            return;
+        }
+
+        $this->user = $this->getUserFromFIle();
+        echo "Unserialising success\n";
+
+        if (!$this->user) {
+            $this->user = new User(self::$client, self::LOGIN, self::PASSWORD);
+        }
     }
-
 
     public function run()
     {
         //TODO: need to add provisional headers to be non-detected
         //TODO: add logger
 
-        echo "Login success." . PHP_EOL;
+        echo "Starting running program..." . PHP_EOL;
 
-        $this->likeUserPage("zvzvzvzvzvzvzvzvzvzvzv");
+        $this->likeUserPage("sergii_crazy");
 
 
 //        echo "Requesting on hashtag..." . PHP_EOL;
-//        $query_hash_tags = "298b92c8d7cad703f7565aa892ede943";
+//
 //
 //        $headers = [
 //            "Cookie" => "sessionid=" . $user->getSessionId() . ";"
@@ -152,11 +156,59 @@ class Bot
         if (!$matches) {
             return null;
         }
+
         $r = json_decode($matches[1][0]);
-        foreach ($r->nodes as $node)
-        {
+
+        $id = $r->nodes[0]->owner->id;
+
+        foreach ($r->nodes as $node) {
             $this->likePost($node->id, $node->code);
         }
+
+        $end_cursor = $r->page_info->end_cursor;
+        $has_next_page = $r->page_info->has_next_page;
+
+        while($has_next_page)
+        {
+            $variables = [
+                "id" => $id,
+                "first" => self::COUNT_OF_POSTS,
+                "after" => $end_cursor
+            ];
+
+            $headers = [
+                "referer" => self::INSTAGRAM_DOMEN . "/" . $login . "/",
+                "cookie" => "csrftoken=" . $this->user->getCsrfToken() . "; ds_user_id=" . $this->user->getUserId() . "; sessionid=" . $this->user->getSessionId() . ";",
+                "x-requested-with" => "XMLHttpRequest"
+            ];
+
+            $url = self::INSTAGRAM_DOMEN . "/graphql/query/?query_hash=" . self::QUERY_HASH_FOR_PAGES . "&variables=" . json_encode($variables);
+
+            echo "Getting data from " . $url . PHP_EOL;
+
+            $res = self::$client->request("get", $url, [
+                'headers' => $headers
+            ]);
+
+            $result = json_decode($res->getBody());
+            $page_data = $result->data->user->edge_owner_to_timeline_media;
+            $posts = $page_data->edges;
+
+            foreach ($posts as $post) {
+                $this->likePost($post->node->id, $post->node->shortcode);
+            }
+
+            echo $this->counter . PHP_EOL;
+
+            $end_cursor = $page_data->page_info->end_cursor;
+            $has_next_page = $page_data->page_info->has_next_page;
+        }
+    }
+
+    private function getUserFromFIle()
+    {
+        echo "Unserialising...\n";
+        return unserialize(file_get_contents(self::PATH_TO_USER_FILE));
     }
 }
 

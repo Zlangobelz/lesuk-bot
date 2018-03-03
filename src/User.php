@@ -8,6 +8,7 @@ class User
 {
     public $isAuthorised = false;
     public $login;
+    public $auth_time;
 
     protected $sessionId;
     protected $csrf_token;
@@ -15,8 +16,23 @@ class User
 
     public function __construct($client, $login, $password)
     {
-        $this->login = $login;
+        echo "Logining...\n";
         $this->authorize($login, $password);
+        $this->login = $login;
+        echo "Login success\n";
+        $this->auth_time = time();
+        echo "Login time: " . $this->auth_time . PHP_EOL;
+        echo "Serialising user...\n";
+        $this->serialise();
+        echo "Serialising success\n";
+    }
+
+    public function serialise()
+    {
+        $serialised = serialize($this);
+        $file = fopen("user.txt", "w") or die("Can`t create file");
+        fwrite($file, $serialised);
+        fclose($file);
     }
 
     private function authorize($login, $password)
@@ -24,44 +40,51 @@ class User
         $response = Bot::request('get', Bot::INSTAGRAM_DOMEN);
         $this->setCsrfToken($this->csrfToken($response));
 
-//        $headers = [
-//            "x-csrftoken" => $this->getCsrfToken(),
-//            "referer" => Bot::INSTAGRAM_DOMEN,
-//            "cookie" => "csrftoken=" . $this->getCsrfToken() . ";",
-//            "origin" => Bot::INSTAGRAM_DOMEN,
-//        ];
-//
-//        $form_params = [
-//            'username' => $login,
-//            'password' => $password
-//        ];
+        $headers = [
+            "x-csrftoken" => $this->getCsrfToken(),
+            "referer" => Bot::INSTAGRAM_DOMEN,
+            "cookie" => "csrftoken=" . $this->getCsrfToken() . ";",
+            "origin" => Bot::INSTAGRAM_DOMEN,
+        ];
+
+        $form_params = [
+            'username' => $login,
+            'password' => $password
+        ];
 
         try {
-//            $response = Bot::request("post", Bot::INSTAGRAM_DOMEN . "/accounts/login/ajax/", [
-//                'headers' => $headers,
-//                'form_params' => $form_params
-//            ]);
+            $response = Bot::request("post", Bot::INSTAGRAM_DOMEN . "/accounts/login/ajax/", [
+                'headers' => $headers,
+                'form_params' => $form_params
+            ]);
 
-//            $response_body = json_decode($response->getBody());
-//
-//            if (!$response_body->authenticated) {
-//                throw new \Exception("Something was wrong with logining.");
-//            }
+            $response_body = json_decode($response->getBody());
+
+            if (!$response_body->authenticated) {
+                throw new \Exception("Something was wrong with logining.");
+            }
             $this->isAuthorised = true;
-            //$this->setCsrfToken($this->csrfToken($response));
-            $this->setCsrfToken("qZ34eFyrwn7r6qtAdNWmDOSB0S1E9cKq");
-            echo "csrf-token: " . $this->getCsrfToken() . PHP_EOL;
-            //$this->setSessionId($this->sessionId($response));
-            $this->setSessionId("IGSC94cb0fe65054e40fdb70770427ee3149ed5b829a43abbffe31a70151b87cb748%3A13hxBsrOJpQoSwATVepINRoLeSAf1YwF%3A%7B%22_auth_user_id%22%3A4277241110%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_platform%22%3A4%2C%22_token_ver%22%3A2%2C%22_token%22%3A%224277241110%3A4ynycKCzZjW9Z3uYZpBvbdAzNar436nq%3A0cac70051f4053a905fde5bd646ad2941d6dee75ad251a6014d9e31c9c025c1d%22%2C%22last_refreshed%22%3A1519903429.5508422852%7D");
-            echo "sessionID: " . $this->getSessionId() . PHP_EOL;
+            $this->setCsrfToken($this->csrfToken($response));
+            //echo "csrf-token: " . $this->getCsrfToken() . PHP_EOL;
+            $this->setSessionId($this->sessionId($response));
+            //echo "sessionID: " . $this->getSessionId() . PHP_EOL;
             $this->setUserId($this->userId());
-            echo "userId: " . $this->getUserId() . PHP_EOL;
-
+            //echo "userId: " . $this->getUserId() . PHP_EOL;
 
         } catch (\Exception $e) {
             echo $e->getMessage();
             die();
         }
+    }
+
+    public function __sleep()
+    {
+        return ["csrf_token", "user_id", "sessionId"];
+    }
+
+    public function __wakeup()
+    {
+        $this->auth_time = time();
     }
 
     public function setCsrfToken($value)
@@ -140,5 +163,4 @@ class User
         }
         return $matches[1][0];
     }
-
 }
