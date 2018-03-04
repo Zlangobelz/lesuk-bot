@@ -26,7 +26,7 @@ class Bot
         echo "Authentificating..." . PHP_EOL;
 
         if (!file_exists(self::PATH_TO_USER_FILE)) {
-            $this->user = new User(self::$client, self::LOGIN, self::PASSWORD);
+            //$this->user = new User(self::$client, self::LOGIN, self::PASSWORD);
             return;
         }
 
@@ -34,7 +34,7 @@ class Bot
         echo "Unserialising success\n";
 
         if (!$this->user) {
-            $this->user = new User(self::$client, self::LOGIN, self::PASSWORD);
+            //$this->user = new User(self::$client, self::LOGIN, self::PASSWORD);
         }
     }
 
